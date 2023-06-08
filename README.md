@@ -1,2 +1,2 @@
-# WMANSA (White Matter AbNormality Segmentation Algorithm): A new tool for automated segmentation of white matter hyperintensities
+# WMANSA (White Matter AbNormality Segmentation Algorithm): A new tool for automated segmentation of white matter abnormality lesions.
 
