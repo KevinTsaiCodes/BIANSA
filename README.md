@@ -1,4 +1,4 @@
-# WMANSA (White Matter AbNormality Segmentation Algorithm): A new algorithm for automated segmentation of white matter abnormality lesions
+# WMANSA (White Matter AbNormality Segmentation Algorithm): A novel algorithm for automated segmentation of white matter abnormality lesions
 
 ![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]
 
