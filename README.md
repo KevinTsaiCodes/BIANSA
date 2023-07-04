@@ -1,4 +1,4 @@
-# WMANSA (White Matter AbNormality Segmentation Algorithm): A novel algorithm for automated segmentation of white matter abnormality lesions
+# BIANDA (Brain Intensity AbNormality Diagnosis Algorithm): A novel tool for automated diagnosis of white matter hyperintensities
 
 ![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]
 
