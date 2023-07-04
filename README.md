@@ -1,4 +1,4 @@
-# BIANDA (Brain Intensity AbNormality Diagnosis Algorithm): A novel tool for automated diagnosis of white matter hyperintensities
+# BIANDA (Brain Intensity Abnormality Diagnosis Algorithm): A novel tool for automated diagnosis of white matter hyperintensities
 
 ![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]
 
