@@ -1,4 +1,4 @@
-# BIANDA (Brain Intensity Abnormality Diagnosis Algorithm): A novel tool for automated diagnosis of white matter hyperintensities
+# BIANSA (Brain Intensity Abnormality Segmentation Algorithm): A novel tool for automated segmentation of white matter hyperintensities
 
 ![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]
 
