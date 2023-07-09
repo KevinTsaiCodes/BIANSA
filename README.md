@@ -7,15 +7,11 @@
 
 
 ### Dependencies of Python
-- matplotlib 3.2.1
-- numpy 1.21.6
-- opencv-contrib-python 4.7.0.72
-- Pillow 6.1.0
-- pydicom 1.4.2
-- pylibjpeg-libjpeg 1.3.4
-- SimpleITK 1.2.0
-- torch 1.13.1+cu117
-- torchutils 0.0.4
+- numpy==1.21.6
+- opencv-contrib-python==4.7.0.72
+- Pillow==6.1.0
+- pydicom==2.4.1
+- pylibjpeg-libjpeg==1.3.4
 
 #### Install the dependencies
 
