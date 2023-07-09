@@ -1,10 +1,10 @@
+# dcm2png.py -- Convert DICOM to PNG format
+
 import pydicom
 import cv2
 import argparse
 from pydicom.pixel_data_handlers.util import apply_voi_lut
 import numpy as np
-
-
 
 def dcm_to_png(dicom_filename, brightness, png_filename):
     dcm = pydicom.dcmread(dicom_filename)
