@@ -18,7 +18,7 @@ def dcm_to_png(dicom_filename, brightness, png_filename):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input", help="path/to/your/input.dcm", type=str, required=True)
-    parser.add_argument("-b", "--brightness", help="adjust brightness of your output file", type=float, default=0.2, required=False)
+    parser.add_argument("-b", "--brightness", help="adjust the brightness of your output file", type=float, default=0.2, required=False)
     parser.add_argument("-o", "--output", help="path/to/your/output.png", default="output.png", required=True)
 
     args = parser.parse_args()
