@@ -23,7 +23,7 @@ baseFileName = input('Enter the image filename (e.g., image.jpg): ', 's');
 fullFileName = fullfile(folder, baseFileName);
 % Check if file exists.
 if ~exist(fullFileName, 'file')
-  fullFileNameOnSearchPath = baseFileName; % No path this time.
+  fullFileNameOnSearchPath = baseFileName;
   if ~exist(fullFileNameOnSearchPath, 'file')
     errorMessage = sprintf('Error: %s does not exist in the search path folders.', fullFileName);
     uiwait(warndlg(errorMessage));
@@ -83,7 +83,6 @@ msgbox("The brain extration operation has been successfully completed","Success"
 
 [filepath, name, ~] = fileparts(baseFileName);
 
-% Modify extension
 newFilename = fullfile(filepath, [name, '_brain.png']);
 
 imwrite(finalImage, newFilename);
