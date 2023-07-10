@@ -1,9 +1,16 @@
 # Changelog (BIANSA)
 
+## v0.2.3 (2023-07-11)
+#### Added
+- BET.m
+- test_2.dcm
+#### Removed
+- BET.py
+
+
 ## v0.2.2 (2023-07-11)
 #### Added
 - imhist.py
-- BET.m
 #### Update
 - dcm2png.py
 
@@ -19,6 +26,7 @@
 ## v0.0.2 (2023-7-7)
 #### Added
 - dcm2png.py file (v1.0)
+- test.dcm
 
 ## v0.0.1 (2023-6-8)
 #### Added
