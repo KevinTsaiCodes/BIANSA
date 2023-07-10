@@ -1,5 +1,12 @@
 # Changelog (BIANSA)
 
+## v0.2.1 (2023-07-11)
+#### Added
+- imhist.py
+#### Update
+- dcm2png.py
+
+
 ## v0.1.0 (2023-07-10)
 #### Added
 - BET.py
