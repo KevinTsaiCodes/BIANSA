@@ -19,14 +19,16 @@ end
 
 folder = '';
 
-baseFileName = input('Enter the image filename (e.g., image.jpg): ', 's');
+baseFileName = input('Enter the image filename (e.g., image.png): ', 's');
+
 fullFileName = fullfile(folder, baseFileName);
-% Check if file exists.
 if ~exist(fullFileName, 'file')
   fullFileNameOnSearchPath = baseFileName;
   if ~exist(fullFileNameOnSearchPath, 'file')
     errorMessage = sprintf('Error: %s does not exist in the search path folders.', fullFileName);
-    uiwait(warndlg(errorMessage));
+    uiwait(errordlg(errorMessage));
+    clc;
+    clear all;
     return;
   end
 end
@@ -45,7 +47,7 @@ set(gcf, 'Name', 'BET - Brain Extraction Tool', 'NumberTitle', 'Off')
 subplot(2, 3, 2);
 bar(grayLevels, pixelCount);
 grid on;
-title('Histogram of original image', 'FontSize', fontSize);
+title('Histogram of original image', 'FontSize', fontSize, 'Margin', 10);
 
 
 xlim([0 grayLevels(end)]);
@@ -55,14 +57,14 @@ binaryImage = bwareaopen(binaryImage, 10);
 subplot(2, 3, 3);
 imshow(binaryImage, []);
 axis on;
-title('Binary Image', 'FontSize', fontSize);
+title('Binary Image', 'FontSize', fontSize, 'Margin', 10);
 
 binaryImage(end,:) = true;
 binaryImage = imfill(binaryImage, 'holes');
 subplot(2, 3, 4);
 imshow(binaryImage, []);
 axis on;
-title('Cleaned Binary Image', 'FontSize', fontSize);
+title('Cleaned Binary Image', 'FontSize', fontSize,  'Margin', 10);
 
 
 se = strel('disk', 15, 0);
@@ -75,6 +77,8 @@ title('Eroded Binary Image', 'FontSize', fontSize);
 
 finalImage = grayImage;
 finalImage(~binaryImage) = 0;
+desiredSize = [256, 256];
+finalImage = imresize(finalImage, desiredSize);
 subplot(2, 3, 6);
 imshow(finalImage, []);
 axis on;
