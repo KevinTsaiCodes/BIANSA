@@ -1,5 +1,9 @@
 # Changelog (BIANSA)
 
+# v0.2.5 (2023-07-12)
+#### Added
+- resize.py
+
 ## v0.2.4 (2023-07-11)
 #### Update
 - BET.m (v1.1)
