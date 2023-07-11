@@ -1,5 +1,9 @@
 # Changelog (BIANSA)
 
+## v0.2.4 (2023-07-11)
+#### Update
+- BET.m (v1.1)
+
 ## v0.2.3 (2023-07-11)
 #### Added
 - BET.m (v1.0)
