@@ -7,6 +7,7 @@
 
 
 ### Dependencies
+- Python 3.8
 - numpy==1.21.6
 - opencv-contrib-python==4.7.0.72
 - Pillow==6.1.0
@@ -14,6 +15,6 @@
 - pylibjpeg-libjpeg==1.3.4
 - MATLAB R2023a
 
-#### Install the dependencies
+#### Install the dependencies of python
 
     pip install -r requirements.txt
