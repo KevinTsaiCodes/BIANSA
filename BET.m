@@ -40,7 +40,7 @@ imshow(grayImage, []);
 axis on;
 title('Original Grayscale Image', 'FontSize', fontSize);
 set(gcf, 'Units', 'Normalized', 'OuterPosition', [0 0 1 1]);
-set(gcf, 'Name', 'Demo by ImageAnalyst', 'NumberTitle', 'Off')
+set(gcf, 'Name', 'BET - Brain Extraction Tool', 'NumberTitle', 'Off')
 [pixelCount, grayLevels] = imhist(grayImage);
 subplot(2, 3, 2);
 bar(grayLevels, pixelCount);
