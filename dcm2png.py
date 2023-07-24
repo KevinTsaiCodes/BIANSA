@@ -6,7 +6,9 @@ import argparse
 from pydicom.pixel_data_handlers.util import apply_voi_lut
 import numpy as np
 
-def dcm_to_png(dicom_filename, brightness, png_filename):
+def dcm_to_png(dicom_filename, brightness, png_filename) -> None:
+    if dicom_filename is None:
+        raise Exception("Error: No such file or directory")
     if not(dicom_filename.lower().endswith('.dcm')):
         raise Exception("Please provide a filename with a .dcm extension for the input file.")
     if not(png_filename.lower().endswith('.png')):
@@ -19,7 +21,7 @@ def dcm_to_png(dicom_filename, brightness, png_filename):
 
     cv2.imwrite(png_filename, png_image)
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="This is a command-line tool for"
                                                  " performing DICOM file to PNG file conversion.")
     parser.add_argument("-i", "--INPUT_DATA_PATH", help="path/to/your/input.dcm", type=str, required=True)

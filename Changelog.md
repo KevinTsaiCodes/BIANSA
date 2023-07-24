@@ -1,5 +1,12 @@
 # Changelog (BIANSA)
 
+# v0.3.1 (2023-07-24)
+#### Added
+- AnnotationTool.py
+#### Updated
+- dcm2png.py
+- resize.py
+
 # v0.2.5 (2023-07-12)
 #### Added
 - resize.py

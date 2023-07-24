@@ -10,6 +10,8 @@ def resize(input_image, output_image, desired_size):
     if not(type(desired_size) == int):
         raise Exception("Please provide the desired size in integer format.")
     input_img = cv2.imread(input_image, cv2.IMREAD_GRAYSCALE)
+    if input_img is None:
+        raise Exception("Error: No such file or directory")
     resized_image = cv2.resize(input_img, (desired_size, desired_size))
     cv2.imwrite(output_image, resized_image)
 
