@@ -1,3 +1,5 @@
+import os.path
+
 import cv2
 import numpy as np
 import argparse
@@ -50,7 +52,9 @@ def AnnotationTool(input_filename) -> None:
             mask.fill(0)
 
         elif key == ord('s'):
-            cv2.imwrite(input_filename + '_binary_mask.png', mask)
+            rename_filename = os.path.splitext(input_filename)[0] + '_binary_mask.png'
+            cv2.imwrite(rename_filename, mask)
+            os.replace(rename_filename, "png_files_gt/" + rename_filename.split("/")[-1])
             break
 
         elif key == 27:  # ESC key to exit
