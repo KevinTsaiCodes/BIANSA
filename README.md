@@ -8,12 +8,7 @@
 
 ### Dependencies
 - Python 3.8
-- numpy==1.21.6
-- opencv-contrib-python==4.7.0.72
-- Pillow==6.1.0
-- pydicom==2.4.1
-- pylibjpeg-libjpeg==1.3.4
-- MATLAB R2023a
+- MATLAB 2017a
 
 #### Install the dependencies of python
 
