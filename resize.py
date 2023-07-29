@@ -1,25 +1,21 @@
 import cv2
 import argparse
-import math
+import os
 
-def resize(input_image, output_image, desired_size):
-    if not(input_image.lower().endswith('.png')):
-        raise Exception("Please provide a filename with a .png extension for the input file.")
-    if not(output_image.lower().endswith('.png')):
-        raise Exception("Please provide a filename with a .png extension for the output file.")
+def resize(input_directory, output_directory, desired_size):
     if not(type(desired_size) == int):
         raise Exception("Please provide the desired size in integer format.")
-    input_img = cv2.imread(input_image, cv2.IMREAD_GRAYSCALE)
-    if input_img is None:
-        raise Exception("Error: No such file or directory")
-    resized_image = cv2.resize(input_img, (desired_size, desired_size))
-    cv2.imwrite(output_image, resized_image)
+    for pngFile in os.listdir(input_directory):
+        input_image = cv2.imread(os.path.join(input_directory, pngFile), cv2.IMREAD_GRAYSCALE)
+        resized_image = cv2.resize(input_image, (desired_size, desired_size))
+        print(os.path.join(output_directory, pngFile))
+        cv2.imwrite(os.path.join(output_directory, os.path.splitext(pngFile)[0] + "_" + str(desired_size) + ".png"), resized_image)
 
 def main():
     parser = argparse.ArgumentParser(description="This is a command-line tool to resize an image.")
-    parser.add_argument("-i", "--INPUT_DATA_PATH", help="path/to/your/input.png", type=str, required=True)
-    parser.add_argument("-o", "--OUTPUT_DATA_PATH", help="path/to/your/output.png", type=str, required=True)
-    parser.add_argument("-s", "--SIZE", help="desired output size of your input", type=int, default=256, required=False)
+    parser.add_argument("-i", "--INPUT_DATA_PATH", help="path/to/your/input/directory", type=str, required=True)
+    parser.add_argument("-o", "--OUTPUT_DATA_PATH", help="path/to/your/output/directory", type=str, required=True)
+    parser.add_argument("-s", "--SIZE", help="desired output size of your input", type=int, default=512, required=False)
     args = parser.parse_args()
     resize(args.INPUT_DATA_PATH, args.OUTPUT_DATA_PATH, args.SIZE)
 

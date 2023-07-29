@@ -23,7 +23,7 @@
 1. To build **training** dataset, you'll also need following datasets. All the images need to be converted to **grayscale**.
 - [ADNI](https://adni.loni.usc.edu/)
 
-2. To build **validation/testing** dataset, you'll also need following datasets. All the images need to be cropped into a square, and resize into **256*256**.
+2. To build **validation/testing** dataset, you'll also need following datasets. All the images need to be cropped into a square, and resize into **512*512**.
 - [ADNI 2](https://adni.loni.usc.edu/)
 - [ADNI 3](https://adni.loni.usc.edu/)
 
