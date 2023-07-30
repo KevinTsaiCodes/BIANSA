@@ -54,7 +54,7 @@ def AnnotationTool(input_filename) -> None:
         elif key == ord('s'):
             rename_filename = os.path.splitext(input_filename)[0] + '_binary_mask.png'
             cv2.imwrite(rename_filename, mask)
-            os.replace(rename_filename, "png_files_gt/" + rename_filename.split("/")[-1])
+            os.replace(rename_filename, "training_gt/" + rename_filename.split("/")[-1])
             break
 
         elif key == 27:  # ESC key to exit
@@ -66,7 +66,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="This is a tool for image segmentation annotation, "
                                                  "but you need to provide the path to the "
                                                  "input image using the command line.")
-    parser.add_argument("-i", "--INPUT_DATA_PATH", help="path/to/your/input.dcm", type=str, required=True)
+    parser.add_argument("-i", "--INPUT_DATA_PATH", help="path/to/your/input.png", type=str, required=True)
     args = parser.parse_args()
     AnnotationTool(args.INPUT_DATA_PATH)
 

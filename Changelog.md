@@ -1,11 +1,16 @@
 # Changelog (BIANSA)
 
-# v0.3.3 (2023-07-30)
+# v0.3.3 (2023-07-31)
 #### Added
-- BET_result_files folder
-- dcm_files folder
-- png_files_gt folder
-- resize_png_files folder
+- rename_png.py
+- dcm_files (folder)
+- png_files (folder)
+- testing (folder)
+- training (folder)
+- training_gt (folder)
+
+#### Removed
+- BET.m
 
 # v0.3.1 (2023-07-24)
 #### Added

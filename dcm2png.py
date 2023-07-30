@@ -28,9 +28,9 @@ def DCM2PNG(input_path: str, brightness: float, output_path: str) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="This is a command-line tool for"
                                                  " performing DICOM file to PNG file conversion.")
-    parser.add_argument("-i", "--INPUT_DATA_PATH", help="path/to/your/input/dcm/directory", type=str, required=True)
+    parser.add_argument("-i", "--INPUT_DATA_PATH", help="path/to/your/input/dcm/directory", type=str, default="dcm_files", required=False)
     parser.add_argument("-b", "--BRIGHTNESS", help="adjust brightness of your output file", type=float, default=0.2, required=False)
-    parser.add_argument("-o", "--OUTPUT_DATA_PATH", help="path/to/your/output/png/directory", type=str, required=True)
+    parser.add_argument("-o", "--OUTPUT_DATA_PATH", help="path/to/your/output/png/directory", type=str, default="png_files", required=False)
     args = parser.parse_args()
     DCM2PNG(args.INPUT_DATA_PATH, args.BRIGHTNESS, args.OUTPUT_DATA_PATH)
 
