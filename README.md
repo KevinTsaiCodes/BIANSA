@@ -8,7 +8,6 @@
 
 ### Dependencies
 - Python 3.8
-- MATLAB 2017a
 
 #### Install the dependencies of python
 
