@@ -1,6 +1,16 @@
 # Changelog (BIANSA)
 
-# v0.3.3 (2023-07-31)
+# v0.4.0
+#### Added
+- rotation.py
+
+#### Removed
+- dcm2png.py
+- dcm_files
+- png_files
+- imhist.py
+
+# v0.3.3 (2023-07-30)
 #### Added
 - rename_png.py
 - dcm_files (folder)
@@ -30,7 +40,6 @@
 ## v0.2.3 (2023-07-11)
 #### Added
 - BET.m (v1.0)
-- test_2.dcm
 #### Removed
 - BET.py
 
@@ -53,7 +62,6 @@
 ## v0.0.2 (2023-7-7)
 #### Added
 - dcm2png.py (v1.0)
-- test.dcm
 
 ## v0.0.1 (2023-6-8)
 #### Added

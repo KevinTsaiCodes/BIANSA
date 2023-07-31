@@ -9,6 +9,7 @@ def resize(input_directory, output_directory, desired_size):
         input_image = cv2.imread(os.path.join(input_directory, pngFile), cv2.IMREAD_GRAYSCALE)
         resized_image = cv2.resize(input_image, (desired_size, desired_size))
         print(os.path.join(output_directory, pngFile))
+
         cv2.imwrite(os.path.join(output_directory, os.path.splitext(pngFile)[0] + "_" + str(desired_size) + ".png"), resized_image)
 
 def main():

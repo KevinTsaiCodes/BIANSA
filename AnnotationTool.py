@@ -20,8 +20,8 @@ def draw_polygon(event, x, y, flags, param):
 
     elif event == cv2.EVENT_LBUTTONUP:
         drawing = False
-        cv2.polylines(image, [np.array(polygon_points)], isClosed=True, color=(255, 255, 255), thickness=2)
-        cv2.fillPoly(mask, [np.array(polygon_points)], (255, 255, 255))
+        cv2.polylines(image, [np.array(polygon_points)], isClosed=True, color=(255, 0, 0), thickness=2)
+        cv2.fillPoly(mask, [np.array(polygon_points)], (255, 0, 0))
         polygon_points = []
 
     elif event == cv2.EVENT_MOUSEMOVE:

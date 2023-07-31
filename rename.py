@@ -33,8 +33,8 @@ def rename_png_files(input_directory):
 def main() -> None:
     parser = argparse.ArgumentParser(description="This is a command-line tool which can"
                                                  " renames PNG files in a specific directory.")
-    parser.add_argument("-i", "--input_directory", type=str, help="the directory to rename PNG files", required=True)
+    parser.add_argument("-i", "--INPUT_DIRECTORY", type=str, help="the directory to rename PNG files", required=True)
     args = parser.parse_args()
-    rename_png_files(args.input_directory)
+    rename_png_files(args.INPUT_DIRECTORY)
 if __name__ == "__main__":
     main()
