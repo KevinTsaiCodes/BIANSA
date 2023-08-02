@@ -16,7 +16,7 @@ def main():
     parser = argparse.ArgumentParser(description="This is a command-line tool to resize a series of images in a specific directory.")
     parser.add_argument("-i", "--INPUT_DATA_PATH", help="path/to/your/input/directory", type=str, default="png_files", required=False)
     parser.add_argument("-o", "--OUTPUT_DATA_PATH", help="path/to/your/output/directory", type=str, required=True)
-    parser.add_argument("-s", "--SIZE", help="desired output size of your input", type=int, default=640, required=False)
+    parser.add_argument("-s", "--SIZE", help="desired output size of your input", type=int, default=512, required=False)
     args = parser.parse_args()
     resize(args.INPUT_DATA_PATH, args.OUTPUT_DATA_PATH, args.SIZE)
 
